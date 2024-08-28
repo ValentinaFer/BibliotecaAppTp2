@@ -38,6 +38,7 @@ public class MainActivityViewModel extends AndroidViewModel {
     public void findLibro(String title){
         if (title.isEmpty()){
             mToastMsg.setValue("Debe ingresar el titulo de un libro!");
+            return;
         }
         for (Libro l : books){
             if (l.getTitle().equalsIgnoreCase(title)){
